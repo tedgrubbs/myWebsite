@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "
+Usage: ./makeWebGame <path to love game>
+Make sure the game path doesn't have a / on the end
+"
+#must input path to game
+inputDir="$1"
+
+mkdir -p ${inputDir##*/}
+cd ${inputDir##*/}
+currentDir="$PWD"
+
+#output is stored in whatever directory you are in when running the script
+python ~/Desktop/love.js/emscripten/tools/file_packager.py game.data --preload $inputDir@/ --js-output=game.js
+
+#copies js, html, and css files needed for the webpage
+cp ~/Desktop/website/release-performance/default-template.html $currentDir
+cp ~/Desktop/website/release-performance/love.js $currentDir
+cp ~/Desktop/website/release-performance/love.js.mem $currentDir
+cp -r ~/Desktop/website/release-performance/theme $currentDir
+
+#changes default index file to name of game
+mv default-template.html ${PWD##*/}.html
+
+echo "Game creation completed"
