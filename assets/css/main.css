@@ -2765,7 +2765,7 @@
 			padding: 0 0.75em;
 			color: inherit;
 			text-decoration: none;
-			font-size: .8em;
+			font-size: 1em;
 		}
 
 			#header a:hover {
@@ -2946,7 +2946,7 @@
 
 		#banner h1 {
 			font-size: 3.5em;
-			font-weight: 100;
+			font-weight: 500;
 			color: #fff;
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
