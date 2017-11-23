@@ -14,13 +14,12 @@ h1 {
 }
 
 body {
-    background-image: url("../../images/banner");
     background-repeat: no-repeat;
     font-family: "Raleway";
     margin: 0;
     padding: none;
-    background-color: rgb( 154, 205, 237 );
-    color: rgb( 28, 78, 104 );
+    background-color: black;
+    color: white;
 }
 
 footer {
